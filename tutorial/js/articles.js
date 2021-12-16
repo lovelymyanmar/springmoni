@@ -7,10 +7,12 @@ function articles(blog) {
         document.querySelector('#articles').innerHTML = '';
         items.forEach(elm => {
             document.querySelector('#articles').innerHTML += '<article id="'+elm.id+'" class="articles-item">'
-            +'<div class="preview">'
-            +'<a href="article.html?id='+elm.id+'" class="article-url">'
-            +'<img class="article-preview" src="'+elm.ogimg+'"/></div>'
+            +'<div style="background-image: url('+elm.ogimg+');" class="preview">'
+            +'<a href="article.html?id='+elm.id+'" class="article-url article-preview">'
+            // +'<img style="visibility:hidden;" src="'+elm.ogimg+'"/>'
+            +'<span class="cat-in-loop">'+elm.cat+'</span>'
             +'</a>'
+            +'</div>'
             +'<div class="article-detail">'
             +'<a href="article.html?id='+elm.id+'" class="article-url">'
             +'<p class="article-title">'+elm.title+'</p>'
