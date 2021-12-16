@@ -39,21 +39,25 @@ header {
     background: linear-gradient(145deg, #f0f0f0, #cacaca);
     box-shadow:  6px 6px 12px #c5c5c5,
     -6px -6px 12px #fbfbfb;
-    /* display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; */
 }
 .preview {
+    display: flex;
     max-width: 33%;
-}
-.article-preview {
     width: 100%;
-    height: auto;
-    aspect-ratio: 1/1;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    aspect-ratio: 1/1;
+}
+.article-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .article-detail {
     padding-left: 0.6rem;
