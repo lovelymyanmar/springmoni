@@ -4,46 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="css/index.css">
-
-    <title>SpringMoni</title>
+    <title>SpringMoni: Site-Script</title>
 </head>
 <body>
-    <header>
-        <div class="brand">
-            <img class="logo" src="https://lovelymyanmar.github.io/springmoni/img/logo.png" />
-            <div class="site-name">SpringMoni</div>
-        </div>
-        <div id="menu-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
-        </div>
-    </header>
-    <main class="container">
-        <div class="left-sidebar">
-            <div class="menu-container">
-                <p>Menu item ...</p>
-                <p>Menu item ...</p>
-                <p>Menu item ...</p>
-                <button id="close-menu">Close Menu</button>
+    <main data-method="home" class="wrapper">
+        <header>
+            <div id="brand" class="site-title">SpringMoni: The Site-Script</div>
+            <div id="menu" class="menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <line x1="4" y1="6" x2="20" y2="6" />
+                    <line x1="4" y1="12" x2="20" y2="12" />
+                    <line x1="4" y1="18" x2="20" y2="18" />
+                </svg>
+                <section class="menu-container">
+                    <a href="index.html" class="menu-item">Home</a>
+                    <!-- <a href="index.html" class="menu-item">About (Under Construction)</a> -->
+                    <a href="https://www.facebook.com/773182576149006/posts/2450739165059997/" class="menu-item">Enroll</a>
+                    <a href="https://m.me/tsanaung.dev" class="menu-item">Contact</a>
+                    <a href="htpps://t.me/staffcondor" class="menu-item">Telegram</a>
+                    <span id="menu" class="menu-item">Close Menu</span>
+                </section>
             </div>
+            <script>
+                document.querySelector('#menu').onclick = function() {
+                    if (document.querySelector('.menu-container').style.display === 'none') {
+                        document.querySelector('.menu-container').style.display = 'block'
+                    } else {
+                        document.querySelector('.menu-container').style.display = 'none'
+                    }
+                }
+            </script>
+        </header>
+
+        <div class="header-devider"></div>
+
+        <div id="lsb" class="sidebar-left hidesm">
+            <a href="index.html" class="menu-item">Home</a>
+            <a href="https://github.com/tsanaung/springmoni/tree/main/core" class="menu-item">Download SpringMoni</a>
+            <!-- <a id="translate" href="#translate" class="menu-item">Translate</a> -->
+            <a href="htpps://m.me/tsanaung.dev" class="menu-item">Any Question?</a>
+            <a href="https://facebook.com/tsanaung.dev" class="menu-item">Facebook Page</a>
+            <a href="htpps://t.me/staffcondor" class="menu-item">Telegram</a>
         </div>
-        <section id="articles">
-            <article class="articles-item">
-                <div class="preview">
-                    <img class="article-preview" src="https://tsanaung.github.io/springmoni/img/springmoni_article_featured.png">
-                </div>
-                <div class="article-detail">
-                    <p class="article-title">Article Title</p>
-                    <p class="article-info">Published on 2021, Modified at 2021 in Category</p>
-                </div>
-            </article>
+        <section id="articles" class="articles main">
+            <article id="static-data"> <img id="preview" class="featured-image" src="https://tsanaung.github.io/springmoni/img/springmoni_article_featured.png"/> <h1 id="article-title" class="article-title">Article Title</h1> <p id="exerpt" class="exerpt">Lorem ipsum ...</p> <span id="article-info" class="article-info">Published on 2021, Updated at 2021 in Category</span></article>
         </section>
-        <div class="right-sidebar">
-            <p>This is right sidebar .. </p>
-            <p>This is right sidebar .. This is right sidebar .. This is right sidebar .. This is right sidebar .. This is right sidebar .. This is right sidebar .. This is right sidebar .. This is right sidebar .. This is right sidebar .. This is right sidebar .. This is right sidebar .. This is right sidebar .. </p>
+        <div id="rsb" class="sidebar-right">
+            <a href="htpps://m.me/tsanaung.dev" class="menu-item">Any Question?</a>
+            <p>&copy; 2021 | SpringMoni BarCourse | All Rights Reserved</p>
+            <p><strong>The Source Code is Licnesed under MIT.</strong></p>
         </div>
     </main>
-    <script type="module" src="js/index.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
